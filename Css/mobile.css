@@ -1,0 +1,25 @@
+/*Géneral*/
+
+/*Header nav*/
+#logo {
+    margin-right: 0;        /*Retire ma marge initialisé au dekstop*/
+}
+
+nav {
+    justify-content: center;     /*Remplace flex-end de la version dekstop pour centrer l'image une fois la version mobile*/
+}
+
+.container-nav{
+    flex-basis: 100%;
+}
+
+.container-nav a {
+    flex-basis: 50%;        /*Permet au "a" du container nav de se partager l'espace a part egale*/
+    text-align: center;     /*Pour aligner les textes au centre*/
+    border-bottom: 3px solid #F2F2F2;   /*disign gris en format mobile sous les "a"*/
+}
+
+.container-nav a:hover {
+    border-bottom: 3px solid #0065fc;    /*Rajoute une barre bleu en dessous d'hebergement et activité quand on passe dessus*/
+    border-top: 3px solid transparent;     /*Permet de desactiver l'annimation du border top du dekstop*/
+}

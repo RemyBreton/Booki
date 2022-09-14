@@ -1,0 +1,42 @@
+/*Géneral*/
+* {
+    box-sizing: border-box; /* Opera/IE 8+ */
+    -moz-box-sizing: border-box; /* Firefox, autres Gecko */
+    -webkit-box-sizing: border-box; /* Safari/Chrome, autres WebKit */
+    font-family: "Raleway" , sans-serif;
+}
+body {
+    margin: 0;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/*Header Nav*/
+nav {
+    display: flex;
+    justify-content: flex-end;      /*commence par la fin du block*/
+    align-items: center;            /*centre sur l'axe vertical*/
+    flex-wrap: wrap;                /*passage a la ligne*/
+}
+
+nav a {
+    padding: 32px;
+    border-top: 3px solid transparent;      /*enleve le petit effet de decallage/saut quand on passe dessus*/
+}
+
+nav a:hover {
+    color: #0065FC;
+    border-top: 3px solid #0065FC;      /*Rajoute une barre bleu au dessus d'hebergement et activité quand on passe dessus*/
+    cursor: pointer;        /*pour faire un changement de cursor quand on passe dessus*/
+}
+
+#logo {
+    margin-right: auto;         /*va permettre de prendre toute la marge disponible pour aller se mettre sur la gauche*/      
+    width: 128px;       /*ajuste la taille du logo*/
+}
+
+.container-nav {
+    display: flex;
+}

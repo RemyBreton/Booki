@@ -1,4 +1,4 @@
-/*Géneral*/
+    /*Géneral*/
 * {
     box-sizing: border-box; /* Opera/IE 8+ */
     -moz-box-sizing: border-box; /* Firefox, autres Gecko */
@@ -8,35 +8,95 @@
 body {
     margin: 0;
 }
+
 a {
     color: inherit;
     text-decoration: none;
 }
 
-/*Header Nav*/
+.contenair-page {
+    max-width: 1440px;      /*taille max du block de page*/
+    padding: 0 32px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.contenair-page p {
+    margin-bottom: 32px;    /*appliquera a tout les p dans le conteneur une marge de 32px en dessous de l'element*/
+    margin-top: 0px;
+    font-size: 18px;
+}
+    /*Header Nav*/
 nav {
     display: flex;
-    justify-content: flex-end;      /*commence par la fin du block*/
-    align-items: center;            /*centre sur l'axe vertical*/
-    flex-wrap: wrap;                /*passage a la ligne*/
+    justify-content: flex-end;     /*commence par la fin du block*/
+    align-items: center;           /*centre sur l'axe vertical*/
+    flex-wrap: wrap;               /*passage a la ligne*/
+    max-width: 1440px;      /*ne cherchera pas a s'agrandir sur des ecrans de +1440px*/
+    margin: auto;
 }
 
 nav a {
     padding: 32px;
-    border-top: 3px solid transparent;      /*enleve le petit effet de decallage/saut quand on passe dessus*/
+    border-top: 3px solid transparent;     /*enleve le petit effet de decalage/saut quand on passe dessus*/
 }
 
 nav a:hover {
     color: #0065FC;
-    border-top: 3px solid #0065FC;      /*Rajoute une barre bleu au dessus d'hebergement et activité quand on passe dessus*/
-    cursor: pointer;        /*pour faire un changement de cursor quand on passe dessus*/
+    border-top: 3px solid #0065FC;     /*Rajoute une barre bleu au dessus d'hebergement et activité quand on le survol*/
+    cursor: pointer;       /*pour faire un changement de cursor quand on survol le "a"*/
 }
 
 #logo {
-    margin-right: auto;         /*va permettre de prendre toute la marge disponible pour aller se mettre sur la gauche*/      
-    width: 128px;       /*ajuste la taille du logo*/
+    margin-right: auto;        /*va permettre de prendre toute la marge disponible pour aller se mettre sur la gauche*/      
+    width: 128px;      /*ajuste la taille du logo*/
 }
 
 .container-nav {
     display: flex;
+}
+    /*Fin header nav*/
+
+    /*Formulaire de recherche*/
+form {
+    display: flex;
+    margin-bottom: 32px;    /*pour faire une marge en dessous du formulaire*/
+    font-size: 20px;
+}
+
+form * {
+    padding: 16px 20px;
+}
+
+form i { 
+    background-color: #F2F2F2;      /*couleur de fond*/
+    border-radius: 16px 0 0 16px;       /*arrondi l'angle haut et bas gauche*/
+}
+
+form input {
+    flex-basis: 240px;
+    border: 1px solid #F2F2F2;
+}
+
+form input::placeholder {
+    font-weight: bold;      /*Mettre en gras le texte de recherche*/
+    color: black;
+}
+
+form button {
+    background-color: #0065FC;
+    font-weight: bold;
+    border-radius: 0 16px 16px 0;
+    color: white;       /*change la couleur de la police*/
+    border: none;       /*retire la bordure noir du bouton*/
+    cursor: pointer;    /*change l'apparence du curseur au survol*/
+    opacity: 0.9;
+}
+
+form button:hover {
+    opacity: 1;
 }

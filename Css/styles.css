@@ -30,6 +30,7 @@ h1 {
     margin-top: 0px;
     font-size: 18px;
 }
+
     /*Header Nav*/
 nav {
     display: flex;
@@ -68,7 +69,7 @@ form {
     font-size: 20px;
 }
 
-form * {
+form > * {
     padding: 16px 20px;
 }
 
@@ -78,8 +79,8 @@ form i {
 }
 
 form input {
-    flex-basis: 240px;
     border: 1px solid #F2F2F2;
+    overflow: hidden;
 }
 
 form input::placeholder {
@@ -98,5 +99,78 @@ form button {
 }
 
 form button:hover {
-    opacity: 1;
+    opacity: 1;         /*Rajoutera un effet au survol*/
 }
+
+.fas.fa-search {
+    display: none;  /*Pour que la loupe ne s'affiche pas quand on est en dekstop*/
+}
+    /*Fin formulaire de recherche*/
+
+    /*Filtre*/
+.container-filtres {
+    display: flex;
+    align-items: center;    /*alignement a la meme hauteur au centre*/
+    flex-wrap: wrap;        /*pour que quand on reduit l'ecran il ne modifie pas les block mais les mettera a la ligne*/
+    gap: 16px;       /*espacement minimum entre chaque block de 16px*/
+    margin-bottom: 32px;
+}
+
+.container-filtres h1 {
+    margin: 0;  /*supprime les marges pour qu'il se recentre*/
+}
+
+.filtres {
+    border: 2px solid #F2F2F2;
+    border-radius: 32px;
+    display: flex;      /*afin d'aligner l'icone et le span au centre du block*/
+    align-items: center;    /*//*/
+}
+
+.filtres i {
+    color: #0065FC;
+    background-color: #DEEBFF;
+    width: 48px;        /*pour que les cercles sois tous de la meme taille*/
+    height: 48px;       /*//*/
+    display: flex;
+    align-items: center;        /*pour centrer l'icone au centre de notre cercle*/
+    justify-content: center;        /*//*/
+    border-radius: 50%;
+    margin: -2px;       /*retrait du margin pour que le cercle deborde un peux */
+}
+
+.filtres span {
+    font-weight: bold;
+    padding: 0 16px;      /*pour que les "block" respire mieux*/
+}
+
+.filtres:hover {
+    background-color: #f3f8ff;      /*Rajoute un fond bleu tres clair au survol*/
+    cursor: pointer;
+    transform: scale(1.05);     /*Rajoute un effet de grossissement au survol*/
+}
+    /*Fin des filtres*/
+
+    /*Information*/
+.container-information {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.container-information i {
+    border: 2px solid #F2F2F2;
+    border-radius: 50%;
+    color: #0065FC;
+    height: 32px;
+    width: 32px;
+    display: flex;
+    align-items: center;        /*pour centrer l'icone dans le cercle*/
+    justify-content: center;
+}
+
+.container-information p {
+    margin: 0;
+}
+
+    /*Fin des informations*/

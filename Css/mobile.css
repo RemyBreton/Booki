@@ -23,3 +23,24 @@ nav {
     border-bottom: 3px solid #0065fc;    /*Rajoute une barre bleu en dessous d'hebergement et activité quand on passe dessus*/
     border-top: 3px solid transparent;     /*Permet de desactiver l'annimation du border top du dekstop*/
 }
+/*Fin header nav*/
+
+/*Formulaire de recherche*/
+.loupe {
+    display: none;
+}
+
+.fas.fa-search {
+    background-color: inherit;
+    display: inline;
+}
+
+input {
+    flex-basis: 100%;   /*Pour que le formulaire prenne 100% de la taille en version mobile*/
+}
+
+form button {
+    border-radius: 30%;         /*pour que le bouton passe avec les 4bords arrondis*/
+    margin-left:-16px;  /*pour rapprocher le bouton de la barre de recherche*/
+}
+/*Fin formulaire de recherche*/

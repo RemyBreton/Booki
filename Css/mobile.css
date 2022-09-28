@@ -1,15 +1,25 @@
 /*Géneral*/
+#contenair-page {
+    padding: 0;
+}
+
+.container-recherche {
+    padding: 0 32px;
+}
+h1 {
+    font-size: 20px;
+}
 
 /*Header nav*/
-#logo {
+#container-logo {
     margin-right: 0;        /*Retire ma marge initialisé au dekstop*/
 }
 
-nav {
+header {
     justify-content: center;     /*Remplace flex-end de la version dekstop pour centrer l'image une fois la version mobile*/
 }
 
-.container-nav{
+nav {
     flex-basis: 100%;
 }
 
@@ -17,6 +27,7 @@ nav {
     flex-basis: 50%;        /*Permet au "a" du container nav de se partager l'espace a part egale*/
     text-align: center;     /*Pour aligner les textes au centre*/
     border-bottom: 3px solid #F2F2F2;   /*disign gris en format mobile sous les "a"*/
+    padding: 16px;
 }
 
 .container-nav a:hover {
@@ -35,8 +46,8 @@ nav {
     display: inline;
 }
 
-input {
-    flex-basis: 100%;   /*Pour que le formulaire prenne 100% de la taille en version mobile*/
+form input::placeholder {
+    font-size: 18px;
 }
 
 form button {
@@ -44,3 +55,78 @@ form button {
     margin-left:-16px;  /*pour rapprocher le bouton de la barre de recherche*/
 }
 /*Fin formulaire de recherche*/
+
+/*filtres*/
+@media (max-width:508px) {
+    .container-filtres h2 {         /*Afin que le titre prenne toute la place pour que les filtres passe en dessous*/
+        flex-basis: 100%;
+        margin: 0;
+    }   
+}
+/*fin des filtres*/
+
+/*Hebergement*/
+
+.container-hebergement-marseille {
+   background-color: white;
+   padding: 0 32px;
+}
+
+.container-hebergement-card {
+    flex-direction: column;
+    margin-bottom: 32px;
+    align-content: center;
+}
+
+.hebergement-card {
+    max-width: 450px;
+    width: 100%;
+}
+
+.hebergement-card-img img {
+    height: 120px;
+}
+/*Fin hebergement*/
+
+/*populaire*/
+.container-most-populaire {
+    border-radius: 0;
+}
+
+.most-populaire-card {
+    min-width: 230px;
+}
+
+.most-populaire-card img {
+    width: 60%;
+}
+
+
+/*fin populaire*/
+
+/*activites*/
+.container-activite-marseille {
+    padding: 0 32px;
+}
+
+.container-activite-card {
+    flex-direction: column;
+    height: 1400px;
+}
+
+.container-card.solo {
+    flex-basis: 15%;
+}
+
+.container-card.double {
+    flex-basis: 30%;
+}
+
+/*footer*/
+.container-footer {
+    flex-direction: column;
+}
+
+.footer-list a {
+    margin-bottom: 8px;
+}

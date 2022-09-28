@@ -1,0 +1,23 @@
+/*Hébergement + populaire*/
+.block-hebergement-populaire {
+    flex-direction: column;
+}
+
+.container-most-populaire {
+    order: -1;      /*passera le container en premiere position*/
+}
+
+/*Hébergement*/
+.hebergement-card {
+    flex-basis: 48%;    /*pour avoir deux carte par ligne*/
+}
+/*Populaire*/
+
+.container-most-populaire-card {
+    flex-direction: column;
+}
+
+.most-populaire-card {
+    align-self: center;
+    width: 85%;
+}

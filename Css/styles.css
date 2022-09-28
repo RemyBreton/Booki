@@ -10,12 +10,12 @@ body {
 }
 
 a {
-    color: inherit;
+    color: inherit;     /*heritera pas de la couleur du parent*/
     text-decoration: none;
 }
 
-.contenair-page {
-    max-width: 1440px;      /*taille max du block de page*/
+#contenair-page {
+    /*max-width: 1440px;*/    /*taille max du block de page*/
     padding: 0 32px;
     margin: auto;
 }
@@ -32,12 +32,12 @@ h1 {
 }
 
     /*Header Nav*/
-nav {
+header {
     display: flex;
     justify-content: flex-end;     /*commence par la fin du block*/
     align-items: center;           /*centre sur l'axe vertical*/
     flex-wrap: wrap;               /*passage a la ligne*/
-    max-width: 1440px;      /*ne cherchera pas a s'agrandir sur des ecrans de +1440px*/
+    /*max-width: 1440px;*/      /*ne cherchera pas a s'agrandir sur des ecrans de +1440px*/
     margin: auto;
 }
 
@@ -52,8 +52,11 @@ nav a:hover {
     cursor: pointer;       /*pour faire un changement de cursor quand on survol le "a"*/
 }
 
-#logo {
-    margin-right: auto;        /*va permettre de prendre toute la marge disponible pour aller se mettre sur la gauche*/      
+#container-logo {
+    margin-right: auto;     /*va permettre de prendre toute la marge disponible pour aller se mettre sur la gauche*/
+}
+
+#logo {             
     width: 128px;      /*ajuste la taille du logo*/
 }
 
@@ -63,6 +66,10 @@ nav a:hover {
     /*Fin header nav*/
 
     /*Formulaire de recherche*/
+.container-recherche {
+    font-weight: 500;
+}
+
 form {
     display: flex;
     margin-bottom: 32px;    /*pour faire une marge en dessous du formulaire*/
@@ -156,6 +163,7 @@ form button:hover {
     display: flex;
     align-items: center;
     gap: 16px;
+    margin-bottom: 32px;
 }
 
 .container-information i {
@@ -172,5 +180,221 @@ form button:hover {
 .container-information p {
     margin: 0;
 }
-
     /*Fin des informations*/
+
+    /*Hebergement+pop*/
+.block-hebergement-populaire {
+    display: flex;      /*pour que les container sois l'un a coté de l'autre*/
+    gap: 30px;
+    margin-bottom: 48px;
+}
+
+.block-hebergement-populaire h2 {
+    margin-top: 8px;
+}
+
+#titre-etoile {
+    display: flex;
+    justify-content: space-between;
+}
+.container-hebergement-marseille > a {  /*pour que sa touche l'enfant direct*/
+    font-weight: bold;
+}
+
+.hebergement-card p, 
+.hebergement-card h3,
+.most-populaire-card-body p,
+.most-populaire-card-body h3 {
+    margin: 3px;
+}
+
+.stars .blue {
+    color: #0065FC;     /*etoile en bleu*/
+}
+
+.stars .grey {
+    color: #d9d9d9;     /*etoile en gris*/
+}
+
+@media (max-width: 1225px) {
+    .hebergement-card h3 {
+        font-size: 18px;
+    }
+    .hebergement-card p {
+        font-size: 14px;
+    }
+    .most-populaire-card h3 {
+        font-size: 18px;
+    }
+    .most-populaire-card p {
+        font-size: 14px;
+    }
+}
+    /*Fin d'hébergement+pop*/
+
+    /*Hébergement*/
+.container-hebergement-marseille {
+    background-color: #F2F2F2;
+    border-radius: 16px;
+    padding: 16px;
+}
+
+.container-hebergement-marseille {
+    flex-basis: 66%;        /*pour que sur la page le container sois 2 fois plus grand que l'autre*/
+}
+
+.container-hebergement-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: space-around;
+    margin-bottom: 16px;        /*Pour que le "a" ne soit pas collé*/
+}
+
+.hebergement-card {
+    min-width: 150px;   /*pour l'empecher de trop retricir*/
+    flex: 1 1 30%;      /*racourcie grow shrink et basis afin d'alouer l'espace des elements*/
+    background-color: white;
+    border-radius: 16px;
+    padding: 8px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.hebergement-card-img img {
+    border-radius: 16px 16px 0 0;
+    width: 100%;
+    height: 120px;
+    object-fit: cover;      /*zoom sur l'image pour pas la deformer*/
+}
+
+
+    /*Fin des hébergements*/
+
+    /*Populaire*/
+.container-most-populaire {
+    flex-basis: 33%;        /*prendra que 33% de la largeur du container*/
+    background-color: #F2F2F2;  
+    border-radius: 16px;
+    padding: 16px;
+}
+
+.container-most-populaire-card {
+    display: flex;          /*card*/
+    flex-direction: column; /*en colonne*/
+    gap: 32px;      /*avec un espace de 32px*/
+}
+
+.most-populaire-card {
+    background-color: white;
+    border-radius: 16px;
+    padding: 8px;
+    min-width: 308px;  
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.most-populaire-card a {
+    display:flex;       /*mettra le texte a droite des images*/
+}
+
+.most-populaire-card img {
+    height: 130px;  
+    object-fit: cover;      /*zoom sur l'image pour pas deformer*/
+    border-radius: 16px 0 0 16px;
+    margin-right: 8px;     /*marge entre l'image et le texte*/
+    width: 100%;   
+    /*max-width: 140px;*/
+    min-width: 100px; /*pour une largeur mini*/
+}
+
+.most-populaire-card .stars {
+    margin-top: auto;   /*pour qu'elles se placent en bas du container*/
+}
+
+.most-populaire-card-body {
+    flex-basis: 100%;       
+    display: flex;          /*afin de mettre le texte à droite de la photo en colone*/
+    flex-direction: column;
+}
+
+/*Fin populaire*/
+
+/*Activité*/
+.container-activite-marseille {
+    display:flex;       
+    flex-direction: column;     /*mettra le contenu en colonne*/
+}
+
+.container-activite-card {
+    height: 480px;  /*hauteur fix au container*/
+    display: flex;  
+    justify-content: space-between; /*espace entre chaque contenu*/
+    margin-bottom: 32px;
+}
+
+.container-card.solo { 
+    display: flex;  
+    flex-basis: 22%;  /*partage equitable de l'espace*/
+}
+
+.container-card.double {
+    display: flex;
+    flex-basis: 22%;    /*partage equitable de l'espace*/
+    flex-wrap: wrap;        /*pour mettre une carte l'une sous l'autre*/
+    gap: 32px;
+}
+
+.activite-card {
+    width: 100%;
+    position: relative;     /*occupera tout l'espace*/
+    border-radius: 15px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.activite-card img {
+    width: 100%;        /*prendra 100% de l'espace de son container*/
+    height: 94%;        /*prendra que 90% de sa hauteur*/
+    border-radius: 15px;
+    object-fit: cover;
+    position: absolute;
+}
+
+.activite-card h3 {
+    width: 100%;
+    height: 55px;   /*aura une hauteur de 55px*/
+    display: flex;
+    align-items: center;    /*centrera le texte*/
+    padding-left: 18px;     
+    position: absolute; 
+    background-color: white;
+    bottom: 0;  /*en bas de la carte*/
+    border-radius: 0 0 16px 16px;
+    margin-bottom: 0;
+}
+
+/*Fin activités*/
+
+/*Footer*/
+.container-footer {
+    display: flex;
+    background-color: #F2F2F2;
+    height: auto;           
+    /*max-width: 1440px;*/
+    gap: 5%;
+    margin: auto;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;     /*mettra chaque liste en colone*/
+    margin-left: 48px;
+    margin-right: 48px;
+}
+
+.footer-list h2 {
+    margin-bottom: 10px;
+}
+
+.footer-list a {
+    margin-bottom: 16px;
+}
+/*Fin footer*/

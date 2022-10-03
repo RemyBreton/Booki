@@ -315,7 +315,7 @@ form button:hover {
 }
 
 .most-populaire-card img {
-    height: 130px;  
+    height: 120px;  
     object-fit: cover;      /*zoom sur l'image pour pas deformer*/
     border-radius: 16px 0 0 16px;
     margin-right: 8px;     /*marge entre l'image et le texte*/

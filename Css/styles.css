@@ -216,20 +216,36 @@ form button:hover {
     color: #d9d9d9;     /*etoile en gris*/
 }
 
-@media (max-width: 1225px) {
+@media (max-width: 1284px) {
     .hebergement-card h3 {
-        font-size: 18px;
+        font-size: 14px;
     }
     .hebergement-card p {
-        font-size: 14px;
+        font-size: 12px;
     }
     .most-populaire-card h3 {
-        font-size: 18px;
-    }
-    .most-populaire-card p {
         font-size: 14px;
     }
+    .most-populaire-card p {
+        font-size: 12px;
+    }
 }
+
+@media (max-width: 1054px) {
+    .hebergement-card h3 {
+        font-size: 12px;
+    }
+    .hebergement-card p {
+        font-size: 11px;
+    }
+    .most-populaire-card h3 {
+        font-size: 12px;
+    }
+    .most-populaire-card p {
+        font-size: 11px;
+    }
+}
+
     /*Fin d'hébergement+pop*/
 
     /*Hébergement*/
@@ -253,7 +269,7 @@ form button:hover {
 
 .hebergement-card {
     min-width: 150px;   /*pour l'empecher de trop retricir*/
-    flex: 1 1 30%;      /*racourcie grow shrink et basis afin d'alouer l'espace des elements*/
+    width: 30%;
     background-color: white;
     border-radius: 16px;
     padding: 8px;
@@ -266,8 +282,6 @@ form button:hover {
     height: 120px;
     object-fit: cover;      /*zoom sur l'image pour pas la deformer*/
 }
-
-
     /*Fin des hébergements*/
 
     /*Populaire*/
@@ -296,14 +310,16 @@ form button:hover {
     display:flex;       /*mettra le texte a droite des images*/
 }
 
+.most-populaire-card-img {
+    width: 45%;
+}
+
 .most-populaire-card img {
     height: 130px;  
     object-fit: cover;      /*zoom sur l'image pour pas deformer*/
     border-radius: 16px 0 0 16px;
     margin-right: 8px;     /*marge entre l'image et le texte*/
-    width: 100%;   
-    /*max-width: 140px;*/
-    min-width: 100px; /*pour une largeur mini*/
+    width: 100%;    
 }
 
 .most-populaire-card .stars {
@@ -311,9 +327,10 @@ form button:hover {
 }
 
 .most-populaire-card-body {
-    flex-basis: 100%;       
+    width: 70%;
     display: flex;          /*afin de mettre le texte à droite de la photo en colone*/
     flex-direction: column;
+    padding-left: 8px;
 }
 
 /*Fin populaire*/

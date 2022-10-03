@@ -7,6 +7,19 @@
     order: -1;      /*passera le container en premiere position*/
 }
 
+.hebergement-card h3 {
+        font-size: 18px;
+}
+.hebergement-card p {
+        font-size: 14px;
+}
+.most-populaire-card h3 {
+        font-size: 18px;
+}
+.most-populaire-card p {
+        font-size: 14px;
+}
+
 /*Hébergement*/
 .hebergement-card {
     flex-basis: 48%;    /*pour avoir deux carte par ligne*/
